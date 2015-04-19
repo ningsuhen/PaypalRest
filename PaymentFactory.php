@@ -79,6 +79,7 @@ class PaymentFactory implements PaymentFactoryInterface
 
                 $credential = new OAuthTokenCredential($config['client_id'], $config['client_secret']);
                 $config['payum.api'] = new ApiContext($credential);
+                return $config['payum.api'];
             };
         }
 
